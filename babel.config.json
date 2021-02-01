@@ -1,0 +1,35 @@
+{
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ],
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-arrow-functions"
+  ],
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": "commonjs",
+        "useBuiltIns": "entry",
+        "corejs": 2,
+        "targets": {
+          "browsers": "> 0.25%, not dead, safari >= 9, ios >= 9"
+        }
+      }
+    ],
+    "@babel/react",
+    "@babel/typescript"
+  ]
+}
